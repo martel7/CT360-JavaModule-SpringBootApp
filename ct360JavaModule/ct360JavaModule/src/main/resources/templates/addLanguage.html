@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add a language</title>
+</head>
+<body>
+
+<form th:action="@{/save_lang}" th:object="${Language}" method="post">
+
+    <div>
+        <label>Language:</label>
+        <input type="text" field="*{language}" name="language" placeholder="Add a new language" />
+    </div>
+    <div>
+        <label>Translation:</label>
+        <input type="text" field="*{helloWorldTranslated}" name="helloWorldTranslated" placeholder="Translate hello world" />
+    </div>
+
+
+    <input type="submit" value="Add language"/>
+</form>
+
+</body>
+</html>
